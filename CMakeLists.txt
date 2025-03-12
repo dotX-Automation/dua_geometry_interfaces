@@ -11,17 +11,19 @@ find_package(builtin_interfaces REQUIRED)
 find_package(dua_common_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 set(SRV_DIR "${CMAKE_CURRENT_SOURCE_DIR}/srv")
 file(GLOB SRV_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "${SRV_DIR}/*.srv")
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${SRV_FILES}
-  DEPENDENCIES builtin_interfaces dua_common_interfaces geometry_msgs)
+  DEPENDENCIES builtin_interfaces dua_common_interfaces geometry_msgs sensor_msgs)
 
 ament_export_dependencies(
   builtin_interfaces
   dua_common_interfaces
-  geometry_msgs)
+  geometry_msgs
+  sensor_msgs)
 
 ament_package()

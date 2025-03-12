@@ -1,0 +1,10 @@
+# Convert GPS coordinates to cartesian coordinates
+#
+# March 12, 2025
+
+# REQUEST
+sensor_msgs/NavSatFix fix         # GPS coordinates to convert
+---
+# RESPONSE
+bool success                      # Indicates valid result
+geometry_msgs/PointStamped point  # Computed cartesian coordinates

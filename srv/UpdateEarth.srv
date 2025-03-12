@@ -1,0 +1,7 @@
+# Updates the earth frame with new gps coordinates
+#
+# March 12, 2025
+
+sensor_msgs/NavSatFix fix         # New GPS coordinates for earth frame
+---
+bool success                      # Indicate operation result
