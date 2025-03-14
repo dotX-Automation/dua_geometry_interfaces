@@ -2,7 +2,18 @@
 #
 # March 12, 2025
 
-geometry_msgs/PointStamped point  # Cartesian coordinates to convert
+# REQUEST
+std_msgs/Header header      # Coordinates frame id and timestamp
+string target_frame_id      # Target frame id for the conversion
+float64 x                   # Cartesian x coordinate
+float64 y                   # Cartesian y coordinate
+float64 z                   # Cartesian z coordinate
+float64[9] covariance       # Cartesian coordinates covariance
 ---
-bool success                      # Indicate valid computation
-sensor_msgs/NavSatFix fix         # Computed gps coordinates
+# RESPONSE
+bool success                # Indicates valid result
+std_msgs/Header header      # Coordinates frame id and timestamp
+float64 lat                 # GPS latitude coordinate
+float64 lon                 # GPS longitude coordinate
+float64 alt                 # GPS altitude coordinate
+float64[9] covariance       # GPS coordinates covariance

@@ -2,6 +2,11 @@
 #
 # March 12, 2025
 
-sensor_msgs/NavSatFix fix         # New GPS coordinates for earth frame
+# REQUEST
+std_msgs/Header header      # Frame id and timestamp of the GPS coordinates
+float64 lat                 # New GPS latitude for earth frame
+float64 lon                 # New GPS longitude for earth frame
+float64 alt                 # New GPS altitude for earth frame
 ---
-bool success                      # Indicate operation result
+# RESPONSE
+bool success                # Indicate operation result
