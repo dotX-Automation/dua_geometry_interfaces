@@ -1,13 +1,13 @@
-# Transforms a pose from one frame to another.
+# Transforms a pose to a target frame at a target time.
 #
-# September 30, 2024
+# May 7, 2025
 
 # REQUEST
 # Source pose
 geometry_msgs/PoseStamped source_pose
 
-# Target frame
-string target_frame
+# Target header
+std_msgs/Header target
 
 # Timeout
 builtin_interfaces/Duration timeout
