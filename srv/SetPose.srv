@@ -1,0 +1,11 @@
+# Sets a given pose into a subsystem.
+#
+# December 17, 2025
+
+# REQUEST
+# Pose to set
+geometry_msgs/PoseStamped pose
+---
+# RESPONSE
+# Result
+dua_common_interfaces/CommandResultStamped result
